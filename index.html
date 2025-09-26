@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAYETIN CREATE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827; /* Dark background */
+      color: #F9FAFB; /* Light text */
+    }
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      opacity: 0.1;
+      object-fit: cover;
+    }
+    .section {
+      padding: 6rem 1rem;
+    }
+    .content-wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 1rem;
+    }
+    nav {
+        background-color: rgba(17, 24, 39, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1.5rem; /* Increased margin */
+        cursor: pointer;
+    }
+    .specialty-card {
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+    .specialty-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(17, 24, 39, 0.7); /* Dark overlay */
+        z-index: 1;
+    }
+    .specialty-card > * {
+        position: relative;
+        z-index: 2;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <video autoplay muted loop id="bg-video">
+    <source src="videos/vid14.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <nav class="sticky top-0 z-50 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="#home" class="flex items-center gap-3">
+            <img src="images/bayetincreatelogo.jpg" alt="BAYETIN CREATE Logo" class="h-10 w-10 rounded-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1f2937/ffffff?text=BC';">
+            <span class="text-2xl font-bold">BAYETIN CREATE</span>
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#home" class="hover:text-indigo-400 transition duration-300">Home</a></li>
+          <li><a href="#portfolio" class="hover:text-indigo-400 transition duration-300">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-indigo-400 transition duration-300">Contact</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden">
+        <ul class="flex flex-col items-center mt-4 space-y-4">
+          <li><a href="#home" class="hover:text-indigo-400 transition duration-300">Home</a></li>
+          <li><a href="#portfolio" class="hover:text-indigo-400 transition duration-300">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-indigo-400 transition duration-300">Contact</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <section id="home" class="min-h-screen flex items-center justify-center text-center">
+    <div class="content-wrapper">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4">BAYETIN CREATE</h1>
+      <p class="text-xl md:text-2xl text-indigo-300 font-semibold">Oasis Of Creativity</p>
+    </div>
+  </section>
+
+  <!-- New Portfolio Section -->
+  <main id="portfolio" class="section bg-gray-900 bg-opacity-80">
+    <div class="content-wrapper">
+        <h2 class="text-4xl font-bold text-center mb-16">My Work</h2>
+
+        <!-- Graphics Design Subsection -->
+        <section class="mb-20">
+            <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Graphics Design</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="masonry-item">
+                    <img src="images/img1.jpg" alt="Logo Design" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">D-Winners Club</h4>
+                        <p class="text-sm text-gray-400">Conflict Management in Relationships</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="masonry-item">
+                    <img src="images/img2.jpg" alt="Poster Design" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Dynamic Living Youth Samaru</h4>
+                        <p class="text-sm text-gray-400">Groove of Gratitude</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="masonry-item">
+                    <img src="images/img3.jpg" alt="Brochure Design" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Ascension Worshippers</h4>
+                        <p class="text-sm text-gray-400">Evangelism and Music Walk</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="masonry-item">
+                    <img src="images/img4.jpg" alt="Social Media Graphics" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Ascension Worshippers</h4>
+                        <p class="text-sm text-gray-400">Sing Unto the Lord</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="masonry-item">
+                    <img src="images/img5.jpg" alt="Packaging Design" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">LinkedIn Inc</h4>
+                        <p class="text-sm text-gray-400">LinkedIn Lease</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="masonry-item">
+                    <img src="images/img6.jpg" alt="UI Kit" class="gallery-img w-full h-auto block rounded-lg shadow-lg">
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Chapel of Holiness YAYA</h4>
+                        <p class="text-sm text-gray-400">Building a Godly Relationship</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Editing Subsection -->
+        <section class="mb-20">
+            <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Video Editing</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <!-- Video 1 -->
+                <div>
+                    <video controls class="w-full rounded-lg shadow-lg" src="videos/vid1.mp4"></video>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">WALLSPIRE ARTZ</h4>
+                        <p class="text-sm text-gray-400">Promo Video</p>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div>
+                    <video controls class="w-full rounded-lg shadow-lg" src="videos/vid2.mp4"></video>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Jim's Birthday</h4>
+                        <p class="text-sm text-gray-400">Birthday Video</p>
+                    </div>
+                </div>
+                 <!-- Video 3 -->
+                <div>
+                    <video controls class="w-full rounded-lg shadow-lg" src="videos/vid3.mp4"></video>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">Youth Alive Conference</h4>
+                        <p class="text-sm text-gray-400">Motion Graphics Reel</p>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div>
+                    <video controls class="w-full rounded-lg shadow-lg" src="videos/vid4.mp4"></video>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-bold text-lg">YouTube Tutorial</h4>
+                        <p class="text-sm text-gray-400">How to delete WhatsApp status</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Subsection -->
+        <section class="mb-20">
+            <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Case Studies</h3>
+            <div class="space-y-12">
+                <!-- Case Study 1 -->
+                <div class="bg-gray-800 rounded-lg shadow-xl p-8 md:flex items-center gap-8">
+                    <img src="images/img7.jpg" alt="Case Study Image" class="gallery-img w-full md:w-1/3 rounded-lg mb-6 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-3">Project: "Burial Booklet" Burial Booklet Cover</h4>
+                        <p class="text-gray-400 mb-4"><strong>Goal:</strong> To design a Burial Booklet Cover, in including the front and back.</p>
+                        <p class="text-gray-300"><strong>Outcome:</strong> We designed an eye catching design, And also 12 pages, including the Order of Service, Autobiography, Hymns, Tributes and so much more.</p>
+                    </div>
+                </div>
+                <!-- Case Study 2 -->
+                <div class="bg-gray-800 rounded-lg shadow-xl p-8 md:flex flex-row-reverse items-center gap-8">
+                    <img src="images/img8.jpg" alt="Case Study Image" class="gallery-img w-full md:w-1/3 rounded-lg mb-6 md:mb-0">
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-3">Project: "Explore and Assist" Logo Design</h4>
+                        <p class="text-gray-400 mb-4"><strong>Goal:</strong> Design a sound logo for explore and assist organization.</p>
+                        <p class="text-gray-300"><strong>Outcome:</strong> The final result we epic and great,the clients loved it, he believes it resonates what they do.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specialties Subsection -->
+        <section>
+            <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">My Specialties</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                <div class="specialty-card p-6 rounded-lg flex flex-col justify-center items-center min-h-[250px]" style="background-image: url('images/img9.jpg');">
+                    <i class="fas fa-film text-4xl text-indigo-400 mb-4"></i>
+                    <h4 class="text-xl font-bold">Flyers</h4>
+                    <p>Either events, or church flyers PowerPoint slides, logos, we deliver best and high quality designs.</p>
+                </div>
+                <div class="specialty-card p-6 rounded-lg flex flex-col justify-center items-center min-h-[250px]" style="background-image: url('images/img10.jpg');">
+                    <i class="fas fa-palette text-4xl text-indigo-400 mb-4"></i>
+                    <h4 class="text-xl font-bold">Birthday Flyers</h4>
+                    <p>If it's a birthday flyer, we deliver eye catching flyers and posters, we got you covered.</p>
+                </div>
+                <div class="specialty-card p-6 rounded-lg flex flex-col justify-center items-center min-h-[250px]" style="background-image: url('images/img1.jpg');">
+                    <i class="fas fa-object-group text-4xl text-indigo-400 mb-4"></i>
+                    <h4 class="text-xl font-bold">Motion Grapics</h4>
+                    <p>We can bring your ideas to life and also generate from scratch whatever you would love to do.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+  </main>
+
+  <section id="contact" class="section">
+    <div class="content-wrapper max-w-2xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+      <div class="space-y-4 mb-8">
+        <p><i class="fas fa-phone mr-2"></i><a href="tel:+2349153594948" class="hover:text-indigo-400">+2349153594948</a></p>
+        <p><i class="fas fa-envelope mr-2"></i><a href="mailto:bayetincreate@gmail.com" class="hover:text-indigo-400">bayetincreate@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt mr-2"></i>Remote; Zaria, Kaduna State Nigeria</p>
+      </div>
+      <h3 class="text-2xl font-semibold mb-6">Apply or Reach Out</h3>
+      <form action="mailto:bayetincreate@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <textarea name="message" placeholder="Your Message..." required rows="5" class="w-full p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button type="submit" class="w-full p-3 rounded bg-indigo-600 hover:bg-indigo-700 transition duration-300 font-bold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 bg-gray-900 bg-opacity-80">
+    <p>© 2025 BAYETIN CREATE. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Image Lightbox Modal -->
+  <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+    <img id="lightbox-image" src="" alt="Full-screen gallery image" class="max-w-full max-h-full rounded-lg">
+  </div>
+
+  <button id="to-top-button" title="Go To Top" class="hidden fixed z-50 bottom-10 right-10 p-4 border-0 w-14 h-14 rounded-full shadow-md bg-indigo-600 hover:bg-indigo-700 text-white text-lg font-semibold transition-colors duration-300">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // To Top Button
+    const toTopButton = document.getElementById("to-top-button");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            toTopButton.classList.remove("hidden");
+        } else {
+            toTopButton.classList.add("hidden");
+        }
+    };
+    toTopButton.onclick = function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mobile Menu
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Image Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const galleryImages = document.querySelectorAll('.gallery-img');
+
+    galleryImages.forEach(image => {
+        image.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent click from bubbling up to parent
+            lightbox.classList.remove('hidden');
+            lightboxImage.src = image.src;
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.add('hidden');
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+  </script>
+
+</body>
+</html>
